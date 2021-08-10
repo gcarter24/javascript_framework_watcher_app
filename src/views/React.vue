@@ -18,9 +18,18 @@ export default {
     };
   },
   created: function () {
-    axios.get("https://api.github.com/repos/facebook/react").then((response) => {
-      this.repo = response.data;
-    });
+    axios
+      .get("https://api.github.com/repos/facebook/react")
+      .then((response) => {
+        this.repo = response.data;
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
   },
   methods: {},
 };
