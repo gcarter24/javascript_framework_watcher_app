@@ -4,6 +4,16 @@
       <router-link to="/">Home</router-link>
       |
       <router-link to="/about">About</router-link>
+      |
+      <router-link to="/angular">Angular</router-link>
+      |
+      <router-link to="/react">React</router-link>
+      |
+      <router-link to="/vuejs">VueJS</router-link>
+      |
+      <router-link to="/svelte">Svelte</router-link>
+      |
+      <router-link to="/ember">Ember</router-link>
     </div>
     <router-view />
   </div>

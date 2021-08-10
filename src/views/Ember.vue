@@ -1,0 +1,27 @@
+<template>
+  <div class="ember">
+    <h3>{{ this.repo.description }}</h3>
+    <div>Stars: {{ this.repo.subscribers_count }}</div>
+    <div>Watchers: {{ this.repo.watchers }}</div>
+    <div>Forks: {{ this.repo.forks }}</div>
+  </div>
+</template>
+
+<style></style>
+
+<script>
+import axios from "axios";
+export default {
+  data: function () {
+    return {
+      repo: {},
+    };
+  },
+  created: function () {
+    axios.get("https://api.github.com/repos/emberjs/ember.js").then((response) => {
+      this.repo = response.data;
+    });
+  },
+  methods: {},
+};
+</script>
