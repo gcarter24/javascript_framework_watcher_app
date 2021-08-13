@@ -1,9 +1,9 @@
 <template>
   <div class="svelte">
     <h3>SvelteJS - {{ this.repo.description }}</h3>
-    <div>Stars: {{ this.repo.subscribers_count }}</div>
-    <div>Watchers: {{ this.repo.watchers }}</div>
-    <div>Forks: {{ this.repo.forks }}</div>
+    <div>Stars - {{ this.repo.subscribers_count }}</div>
+    <div>Watchers - {{ this.repo.watchers }}</div>
+    <div>Forks - {{ this.repo.forks }}</div>
   </div>
 </template>
 
